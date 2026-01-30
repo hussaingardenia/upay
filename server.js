@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static("public"));
 
-const TOKEN = process.env.UPAYMENTS_TOKEN || "YOUR_TOKEN_HERE";
+const TOKEN = process.env.UPAYMENTS_TOKEN || "jtest123";
 
 app.post("/api/upayments/create", async (req, res) => {
   try {
