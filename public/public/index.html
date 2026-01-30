@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UPayments Sandbox Test Shop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">U</div>
+      <div>
+        <div class="title">UPayments Test Shop</div>
+        <div class="subtitle">Sandbox checkout demo (KWD)</div>
+      </div>
+    </div>
+
+    <button class="cartBtn" id="openCartBtn">
+      Cart <span class="pill" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Mini store (Sandbox)</h1>
+      <p>Add items → choose a payment option → redirect to UPayments sandbox payment page.</p>
+    </section>
+
+    <section class="grid" id="products"></section>
+  </main>
+
+  <!-- Cart drawer -->
+  <aside class="drawer" id="drawer">
+    <div class="drawerHeader">
+      <div>
+        <div class="drawerTitle">Your Cart</div>
+        <div class="drawerSub">Choose a payment option below</div>
+      </div>
+      <button class="iconBtn" id="closeCartBtn">✕</button>
+    </div>
+
+    <div class="drawerBody" id="cartItems"></div>
+
+    <div class="drawerFooter">
+      <div class="row">
+        <span>Total</span>
+        <strong id="cartTotal">0.000 KWD</strong>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="form">
+        <input id="custName" placeholder="Customer name (optional)" />
+        <input id="custEmail" placeholder="Email (optional)" />
+        <input id="custMobile" placeholder="Mobile (optional) e.g. 96550000000" />
+      </div>
+
+      <div class="payBox">
+        <div class="payTitle">Payment Options</div>
+
+        <button class="payBtn" id="upayAutoBtn">Pay with UPayments (Auto)</button>
+        <div class="hint">
+          Auto will create a new sandbox session and redirect you to UPayments checkout.
+        </div>
+
+        <div class="manualWrap">
+          <input id="manualLink" placeholder="Paste UPayments sandbox session link..." />
+          <button class="btn" id="manualGoBtn">Open Link</button>
+        </div>
+
+        <div class="hint" id="hint"></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="backdrop" id="backdrop"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
